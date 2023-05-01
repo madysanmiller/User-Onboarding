@@ -19,11 +19,12 @@ const onChange = event => {
             <p>{errors.password}</p>
             <p>{errors.termsOfService}</p>
         </div>
-        <div className="form-inputs">
+        <div className="form-inputs"  >
             <label>Name 
                 <input 
                     type='text'
                     name='name'
+                    data-cy="form-inputs-name"
                     value={values.name}
                     onChange={onChange}
                     placeholder='First and Last Name'
@@ -33,6 +34,7 @@ const onChange = event => {
                 <input 
                     type='email'
                     name='email'
+                    data-cy="form-inputs-email"
                     onChange={onChange}
                     value={values.email}
                     placeholder='Email'
@@ -42,6 +44,7 @@ const onChange = event => {
                 <input 
                     type='password'
                     name='password'
+                    data-cy="form-inputs-password"
                     onChange={onChange}
                     value={values.password}
                     placeholder='Password'
@@ -53,12 +56,13 @@ const onChange = event => {
                 <input 
                     type='checkbox'
                     name='termsOfService'
+                    data-cy="form-check-terms"
                     onChange={onChange}
                     checked={values.termsOfService}
                 />              
             </label>
             </div>
-        <input type='submit'  value='Submit' />
+        <input type='submit' data-cy="submit" value='Submit' />
     </form>
 
     );
